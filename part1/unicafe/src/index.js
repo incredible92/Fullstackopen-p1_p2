@@ -33,15 +33,22 @@ const App = () => {
       <Button handleClick={() => setBad(bad + 1)} text="bad" />
       <h1>Statistics</h1>
 
-      <Statistic text="good" value ={good} />
+{good || neutral || bad  ? (<>
+
+  <Statistic text="good" value ={good} />
       <Statistic text="neutral" value ={neutral} />
       <Statistic text="bad" value ={bad} />
       <Statistic text="All" value={(all = good + neutral + bad)} />
       <Statistic text="Average" value={good * 1 + neutral * 0 + (bad * -1)/3} />
+      <Statistic text="Positive" value={((good / all) * 1 * 100 || 0) + "%"}/>
+     
+</>) : (
+
+  <h3>No feedback given</h3>
+  
+)}
      
       
-  
-      <h3>No feedback given</h3>
   
     </div>
   )
