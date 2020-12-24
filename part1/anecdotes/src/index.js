@@ -12,15 +12,41 @@ const anecdotes = [
 
 const randomNumber = (min, max) => {
   const rand = Math.random() * (max - min) + min;
-  return Math.floor(r);
+  return Math.floor(rand);
 }
 
-const App = (props) => {
+const App = () => {
   const [selected, setSelected] = useState(0)
+  const [points, setPoints] = useState(new Array(anecdotes.length).fill(0));
+
+  const handleVote = () => {
+    console.log(points);
+    let copy = [...points];
+    copy[selected] += 1;
+    setPoints(copy);
+  };
+
+  const handleDotes = () => setSelected(randomNumber(0, anecdotes.length));
+  let max = Math.max(...points);
+
+  let highestIndex = points.indexOf(max);
+
 
   return (
     <div>
-      {props.anecdotes[selected]}
+       <p> {anecdotes[selected]} </p>
+      <p>has {points[selected] > 0 ? points[selected] : 0} votes</p>
+      <button onClick={handleDotes}>next anecdotes</button>
+      <button onClick={handleVote}>Vote</button>
+      <h3>Anecdotes with the most votes</h3>
+      {max > 0 ? (
+        <>
+          <span> {anecdotes[highestIndex]}</span>
+          <p>has {points[highestIndex]} votes</p>
+        </>
+      ) : (
+        ""
+      )}
     </div>
   )
 }
