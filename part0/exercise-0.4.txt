@@ -1,10 +1,4 @@
-title User creates a new note
 
-note left of browser:
-    user types a new note
-    into the text field and clicks
-    the submit button in the browser
-end note
 
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 server-->browser: HTML-code
