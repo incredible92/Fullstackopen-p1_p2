@@ -13,3 +13,7 @@ end note
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
 server-->browser: sends back data.json --the entire list of notes
 
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
