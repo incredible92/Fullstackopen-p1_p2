@@ -6,7 +6,9 @@ const App = () => {
   ]) 
   const [ newName, setNewName ] = useState('')
 
-  
+  const addPerson = (event) => {
+    event.preventDefault();
+  } 
   return (
     <div>
       <h2>Phonebook</h2>
