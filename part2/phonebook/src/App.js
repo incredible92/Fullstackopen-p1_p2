@@ -5,6 +5,7 @@ const App = () => {
     { name: 'Arto Hellas' }
   ]) 
   const [ newName, setNewName ] = useState('')
+  const generateId = () => Math.max(...persons.map((person) => person.id)) + 1;
 
   const addPerson = (event) => {
     event.preventDefault();
