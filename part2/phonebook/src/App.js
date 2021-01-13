@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 
 const App = () => {
   const [ persons, setPersons ] = useState([
-    { name: 'Arto Hellas' }
+    { name: 'Ojonimi' }
   ]) 
   const [ newName, setNewName ] = useState('')
+  const [newNumber, setNewNumber] = useState("");
   const generateId = () => Math.max(...persons.map((person) => person.id)) + 1;
 
   const addPerson = (event) => {
