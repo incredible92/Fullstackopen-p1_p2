@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+import personForm from './componenets/personForm.jsx'
+
+
 const App = () => {
   const [ persons, setPersons ] = useState([
     { name: 'Ojonimi' }
@@ -10,20 +13,26 @@ const App = () => {
 
   const addPerson = (event) => {
     event.preventDefault();
-  } 
+  }
+  const handleNameInput = (e) => setNewName(e.target.value);
+  const handleNumberInput = (e) => setNewNumber(e.target.value);
+  const newPerson = {
+    name: newName,
+    number: newNumber,
+    id: generateId(),
+  };
+   
   return (
     <div>
       <h2>Phonebook</h2>
-      <form>
-        <div>
-          name: <input />
-        </div>
-        <div>
-          <button type="submit">add</button>
-        </div>
-      </form>
-      <h2>Numbers</h2>
-      ...
+      <h2>Add name</h2>
+      <personForm        
+       name={newName}
+        number={newNumber}
+        nameInput={handleNameInput}
+        numberInput={handleNumberInput}
+        submit={addPerson} />
+     
     </div>
   )
 }
