@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-import personForm from './componenets/personForm.jsx'
-
+import personForm from './components/personForm.jsx'
 
 const App = () => {
   const [ persons, setPersons ] = useState([
@@ -13,6 +12,8 @@ const App = () => {
 
   const addPerson = (event) => {
     event.preventDefault();
+    if (!newName || !newNumber) return;
+
   }
   const handleNameInput = (e) => setNewName(e.target.value);
   const handleNumberInput = (e) => setNewNumber(e.target.value);
@@ -26,7 +27,13 @@ const App = () => {
     <div>
       <h2>Phonebook</h2>
       <h2>Add name</h2>
-     
+     <personForm 
+     name={newName}
+     number={newNumber}
+     nameInput={handleNameInput}
+     numberInput={handleNumberInput}
+     submit={addPerson}
+     />
     </div>
   )
 }
