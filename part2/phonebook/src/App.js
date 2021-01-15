@@ -26,12 +26,6 @@ const App = () => {
     <div>
       <h2>Phonebook</h2>
       <h2>Add name</h2>
-      <personForm        
-       name={newName}
-        number={newNumber}
-        nameInput={handleNameInput}
-        numberInput={handleNumberInput}
-        submit={addPerson} />
      
     </div>
   )
