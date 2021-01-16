@@ -1,19 +1,21 @@
 import React from "react";
 
-const PersonForm = ({ name, number, nameInput, numberInput, submit }) => {
+const PersonForm = (props) => {
   return (
-    <form onSubmit={submit}>
-      <div>
-        name: <input value={name} onInput={nameInput} />
-      </div>
-      <div>
-        number: <input value={number} onInput={numberInput} />
-      </div>
-      <div>
-        <button type="submit">add</button>
-      </div>
-    </form>
+    <div>
+      <form onSubmit={props.addDetails}>
+        <div>
+          name: <input value={props.newName} onChange={props.handleChange} />{" "}
+          <br />
+          number:{" "}
+          <input value={props.newNumber} onChange={props.handleNumberChange} />
+        </div>
+
+        <div>
+          <button type="submit">add</button>
+        </div>
+      </form>
+    </div>
   );
 };
-
 export default PersonForm;
