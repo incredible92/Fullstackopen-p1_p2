@@ -18,4 +18,4 @@ const Persons = (props) => {
   return <ul>{disp()}</ul>;
 };
 
-export default persons;
+export default Persons;
