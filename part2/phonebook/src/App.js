@@ -23,7 +23,7 @@ const App = () => {
 	  message: null,
 	  category: null
   })
-
+  
   const addDetails = (event) => {
 	  event.preventDefault()
 	//   console.log(event.target)

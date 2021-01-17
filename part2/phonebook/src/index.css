@@ -12,6 +12,8 @@ body {
 }
 
 .success {
+  width: 20vw;
+  height: 10vh;
   color: green;
   background: lightgrey;
   font-size: 20px;
@@ -22,6 +24,8 @@ body {
 }
 
 .error {
+  width: 20vw;
+  height: 10vh;
   color: red;
   background: lightgrey;
   font-size: 20px;
