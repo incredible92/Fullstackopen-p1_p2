@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React from 'react'
 import Weather from './weather'
 
 const DisplayCountry = ({filteredCountries}) => {
@@ -24,7 +23,7 @@ const DisplayCountry = ({filteredCountries}) => {
                 
                  </ul>
                  <br/>
-                 <img src={filteredCountries[0].flag}  width="150" height="150"/>
+                 <img src={filteredCountries[0].flag}  width="150" height="150" alt="flags"/>
                  <h2>Weather in {capital}</h2>
                  <Weather capital={capital}/>
 
