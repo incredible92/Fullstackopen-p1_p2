@@ -12,7 +12,7 @@ const DisplayCountry = ({filteredCountries}) => {
                 capital {filteredCountries[0].capital}<br/>
                 population {filteredCountries[0].population}
                 <br/>
-                <h3>lang</h3>
+                <h3>languages</h3>
                 <ul>
                 {
                     filteredCountries[0].languages.map((lang, index)=>{
