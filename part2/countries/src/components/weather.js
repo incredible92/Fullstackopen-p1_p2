@@ -12,8 +12,7 @@ const Weather = ({capital}) => {
 
     if ( ! weather ) {
 		return (
-			<>
-			</>
+			<div></div>
 		)
 	}
 
