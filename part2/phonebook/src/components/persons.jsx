@@ -7,15 +7,6 @@ const Persons = (props) => {
       person.name.toLowerCase().includes(props.showResults.toLowerCase())
     );
   }
-  const disp = () =>
-    filteredNames.map((person) => (
-      <li key={person.name}>
-        {" "}
-        {person.name} {person.number}{" "}
-        <button onClick={() => props.deleteP(person.id)}>delete</button>
-      </li>
-    ));
-  return <ul>{disp()}</ul>;
-};
+  
 
 export default Persons;
