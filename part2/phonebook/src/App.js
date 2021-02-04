@@ -50,19 +50,11 @@ const App = () => {
 					}, 5000)
 					const newPers = persons.map(person=> person.id!==id ? person : newP)
 					setPersons(newPers)
+
+				
 					
 				})
-				.catch(error=>{
-					
-					const mess = {
-						message: `${obj.name} has already been removed from the database `,
-						category: 'error'
-					}
-					setErrorMessage(mess)
-					setTimeout(() => {
-						setErrorMessage({...errorMessage, message: null})
-					}, 5000)
-				})
+				
 			}
 		}
 		else{
