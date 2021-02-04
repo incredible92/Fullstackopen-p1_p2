@@ -54,7 +54,17 @@ const App = () => {
 				
 					
 				})
-				
+				.catch(error=>{
+					
+					const mess = {
+						message: `${obj.name} has already been removed from the database `,
+						category: 'error'
+					}
+					setErrorMessage(mess)
+					setTimeout(() => {
+						setErrorMessage({...errorMessage, message: null})
+					}, 5000)
+				})
 			}
 		}
 		else{
