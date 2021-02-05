@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-import axios from 'axios'
 import personService from './services/person.jsx';
 import './index.css';
 
